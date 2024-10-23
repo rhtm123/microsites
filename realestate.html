@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Property Showcase</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Announcement Banner -->
+    <div class="bg-blue-50 text-blue-700 px-4 py-2">
+        <div class="max-w-7xl mx-auto text-center">
+            <p>Special Launch Offer: Book now and get 5% discount! Limited time only.</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-8">
+                    <div class="flex items-center space-x-2">
+                    <img src="https://www.growtechlab.com/image/logo.png?height=120&width=40" alt="Logo" class="h-12 ">
+                    <h2 class="font-bold space-x-8">Real Estate</h2>
+                </div>
+                    <div class="hidden lg:flex space-x-8">
+                        <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                        <a href="#features" class="text-gray-700 hover:text-blue-600 font-medium">Features</a>
+                        <a href="#gallery" class="text-gray-700 hover:text-blue-600 font-medium">Gallery</a>
+                        <a href="#location" class="text-gray-700 hover:text-blue-600 font-medium">Location</a>
+                        <a href="#pricing" class="text-gray-700 hover:text-blue-600 font-medium">Pricing</a>
+                        <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:block bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-2 rounded-full transition-colors">
+                        Download Brochure
+                    </button>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition-colors">
+                        Book a Visit
+                    </button>
+                    <button class="lg:hidden bg-gray-100 p-2 rounded-full">
+                        <img src="/api/placeholder/24/24" alt="Menu" class="w-6 h-6">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen">
+        <div class="absolute inset-0">
+            <img src="https://is1-3.housingcdn.com/01c16c28/55d4759607a12271751b324a7effc656/v0/medium/1_bhk_apartment-for-sale-naigaon_east-Mumbai-others.jpg?height=1080&width=1920" alt="Luxury Property" class="w-full h-full object-cover opacity-90">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30"></div>
+        </div>
+        <div class="relative h-full flex items-center">
+            <div class="max-w-7xl mx-auto px-4 w-full">
+                <div class="max-w-3xl">
+                    <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">Luxury Living Redefined</h1>
+                    <p class="text-xl text-gray-200 mb-8">Experience unparalleled luxury in our meticulously designed spaces with breathtaking views and world-class amenities.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full transition-colors">
+                            Schedule a Visit
+                        </button>
+                        <button class="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-full transition-colors">
+                            Virtual Tour
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Highlights -->
+    <section class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Property Highlights</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover what makes our properties stand out from the rest</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <img src="data:image/jpeg;base64,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" alt="Location" class="w-6 h-6">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Prime Location</h3>
+                    <p class="text-gray-600">Located in the heart of the city with easy access to all amenities</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/24-hours-security-3065646-2590967.png/24/24" alt="Security" class="w-6 h-6">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">24/7 Security</h3>
+                    <p class="text-gray-600">Advanced security systems with round-the-clock surveillance</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <img src="https://media.istockphoto.com/id/1151382055/vector/amenities-icon-simple-element-illustration-amenities-concept-symbol-design-can-be-used-for.jpg?s=612x612&w=0&k=20&c=UeTknGubrEppn78NZNTnh2oEUlwp9HAWvKX50bI3uY0=" alt="Amenities" class="w-6 h-6">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Luxury Amenities</h3>
+                    <p class="text-gray-600">World-class facilities including spa, gym, and infinity pool</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <img src="https://e7.pngegg.com/pngimages/781/441/png-clipart-car-park-smart-parking-computer-icons-car-text-car.png" alt="Parking" class="w-6 h-6">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Smart Parking</h3>
+                    <p class="text-gray-600">Automated parking system with dedicated spots for residents</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="bg-white py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Featured Properties</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore our collection of premium properties</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Property Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="relative">
+                        <img src="https://www.katarocks.com/wp-content/uploads/2016/01/KR_75059-HDR-Pano.jpg?height=300&width=40" alt="Property" class="w-full h-64 object-cover">
+                        <span class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Featured</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Luxury Sky Villa</h3>
+                        <p class="text-gray-600 mb-4">Premium 4 BHK penthouse with panoramic views</p>
+                        <div class="flex flex-wrap gap-4 mb-6">
+                            <span class="flex items-center gap-2 text-gray-600">
+                                <img src="https://www.vhv.rs/dpng/d/501-5016299_area-location-icon-png-file-transparent-png.png?height=16&width=16" alt="Area" class="w-4 h-4">
+                                2,500 sq.ft
+                            </span>
+                            <span class="flex items-center gap-2 text-gray-600">
+                                <img src="https://png.pngtree.com/element_our/20190528/ourmid/pngtree-bed-icon-image_1175748.jpg?height=16&width=16" alt="Bedroom" class="w-4 h-4">
+                                4 Beds
+                            </span>
+                            <span class="flex items-center gap-2 text-gray-600">
+                                <img src="https://png.pngtree.com/png-vector/20240519/ourlarge/pngtree-bathroom-icon-with-mirror-and-shower-outline-design-vector-illustrations-png-image_12485407.png?height=16&width=16" alt="Bathroom" class="w-4 h-4">
+                                4.5 Baths
+                            </span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-600">₹43.50 Lacs</span>
+                            <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-full transition-colors">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+              <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="relative">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCoFJnCMN4_Nx8uAcDHzbN6OQ9k0Y--FsT1w&s?height=300&width=40" alt="Property" class="w-full h-64 object-cover">
+                        <span class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Featured</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Luxury PentHouse Villa</h3>
+                        <p class="text-gray-600 mb-4">Premium 5 BHK penthouse with panoramic views</p>
+                        <div class="flex flex-wrap gap-4 mb-6">
+                            <span class="flex items-center gap-2 text-gray-600">
+                                <img src="https://www.vhv.rs/dpng/d/501-5016299_area-location-icon-png-file-transparent-png.png?height=16&width=16" alt="Area" class="w-4 h-4">
+                                3,500 sq.ft
+                            </span>
+                            <span class="flex items-center gap-2 text-gray-600">
+                                <img src="https://png.pngtree.com/element_our/20190528/ourmid/pngtree-bed-icon-image_1175748.jpg?height=16&width=16" alt="Bedroom" class="w-4 h-4">
+                                5 Beds
+                            </span>
+                            <span class="flex items-center gap-2 text-gray-600">
+                                <img src="https://png.pngtree.com/png-vector/20240519/ourlarge/pngtree-bathroom-icon-with-mirror-and-shower-outline-design-vector-illustrations-png-image_12485407.png?height=16&width=16" alt="Bathroom" class="w-4 h-4">
+                                4.5 Baths
+                            </span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-600">₹90.50 Lacs</span>
+                            <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-full transition-colors">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+              <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="relative">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP9nPqtvS6h31rbRLCX3EXZX54uBF72gWjbQ&s?height=300&width=40" alt="Property" class="w-full h-64 object-cover">
+                        <span class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Featured</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Luxury Sea Villa</h3>
+                        <p class="text-gray-600 mb-4">Premium 4 BHK penthouse with panoramic views</p>
+                        <div class="flex flex-wrap gap-4 mb-6">
+                            <span class="flex items-center gap-2 text-gray-600">
+                                <img src="https://www.vhv.rs/dpng/d/501-5016299_area-location-icon-png-file-transparent-png.png?height=16&width=16" alt="Area" class="w-4 h-4">
+                                2,500 sq.ft
+                            </span>
+                            <span class="flex items-center gap-2 text-gray-600">
+                                <img src="https://png.pngtree.com/element_our/20190528/ourmid/pngtree-bed-icon-image_1175748.jpg?height=16&width=16" alt="Bedroom" class="w-4 h-4">
+                                4 Beds
+                            </span>
+                            <span class="flex items-center gap-2 text-gray-600">
+                                <img src="https://png.pngtree.com/png-vector/20240519/ourlarge/pngtree-bathroom-icon-with-mirror-and-shower-outline-design-vector-illustrations-png-image_12485407.png?height=16&width=16" alt="Bathroom" class="w-4 h-4">
+                                4.5 Baths
+                            </span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-600">₹70.50 Lacs</span>
+                            <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-full transition-colors">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+              
+              
+                <!-- Repeat similar cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Premium Amenities</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Indulge in luxury with our world-class amenities</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group relative h-96 rounded-xl overflow-hidden">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/SkyPark_Infinity_Pool_%28view_from_deckchair%29.jpg/1200px-SkyPark_Infinity_Pool_%28view_from_deckchair%29.jpg?height=600&width=400" alt="Infinity Pool" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <h3 class="text-xl font-semibold text-white mb-2">Infinity Pool</h3>
+                            <p class="text-gray-200">Experience serenity in our rooftop infinity pool</p>
+                        </div>
+                    </div>
+                </div>
+              <div class="group relative h-96 rounded-xl overflow-hidden">
+                    <img src="https://img.staticmb.com/mbcontent/images/crop/uploads/2023/1/Small-Garden-Landscaping-Ideas_0_1200.jpg?height=600&width=400" alt="Infinity Pool" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <h3 class="text-xl font-semibold text-white mb-2">Garden</h3>
+                            <p class="text-gray-200">Experience Luxurious garden</p>
+                        </div>
+                    </div>
+                </div>
+              <div class="group relative h-96 rounded-xl overflow-hidden">
+                    <img src="https://5.imimg.com/data5/ANDROID/Default/2022/2/YU/YX/EV/142636168/product-jpeg-500x500.jpg?height=600&width=400" alt="Infinity Pool" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <h3 class="text-xl font-semibold text-white mb-2">Turf</h3>
+                            <p class="text-gray-200">Experience World class Turf</p>
+                        </div>
+                    </div>
+                </div>
+              
+                <!-- Repeat similar cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Tour CTA -->
+    <section class="bg-blue-600 py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h2 class="text-3xl font-bold mb-6">Take a Virtual Tour</h2>
+                    <p class="text-xl mb-8">Experience our property from the comfort of your home with our immersive 360° virtual tour</p>
+                    <button class="bg-white text-blue-600 px-8 py-3 rounded-full hover:bg-gray-100 transition-colors">
+                        Start Tour Now
+                    </button>
+                </div>
+                <div class="relative">
+                    <img src="https://revivoto.com/blog/wp-content/uploads/Image_-_Virtual_Tour_.jpeg.jpg?height=600&width=400" alt="Virtual Tour" class="rounded-xl shadow-lg">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <button class="bg-white/90 p-4 rounded-full shadow-lg hover:bg-white transition-colors">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRrKSls-F1vq1NLPKjDBTNWTWHUbRID6XGsg&s/24/24" alt="Play" class="w-8 h-8">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">What Our Residents Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from our happy residents</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+              <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=2359/48/48" alt="User" class="w-12 h-12 rounded-full">
+                        <div>
+                            <h3 class="font-semibold">John Smith</h3>
+                            <p class="text-gray-600">Resident since 2022</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Living here has been an absolute dream. The amenities and service are unmatched."</p>
+                </div>
+              <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=2359/48/48" alt="User" class="w-12 h-12 rounded-full">
+                        <div>
+                            <h3 class="font-semibold">Raj Gupta</h3>
+                            <p class="text-gray-600">Resident since 2023</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Living here has been an absolute dream. The amenities and service are unmatched."</p>
+                </div>
+              <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=2359/48/48" alt="User" class="w-12 h-12 rounded-full">
+                        <div>
+                            <h3 class="font-semibold">Ramesh Rajput</h3>
+                            <p class="text-gray-600">Resident since 2021</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Living here has been an absolute dream. The amenities and service are unmatched."</p>
+                </div>
+              
+                <!-- Repeat testimonial cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-white py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+                    <p class="text-gray-600 mb-8">Schedule a visit or request more information about our properties</p>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input type="text" placeholder="First Name" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-600">
+                            <input type="text" placeholder="Last Name" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-600">
+                            <!-- Continuing from the contact form inputs -->
+                            <input type="email" placeholder="Email Address" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-600">
+                            <input type="tel" placeholder="Phone Number" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-600">
+                        </div>
+                        <select class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-600">
+                            <option value="">Interested In</option>
+                            <option value="2bhk">2 BHK Apartment</option>
+                            <option value="3bhk">3 BHK Apartment</option>
+                            <option value="4bhk">4 BHK Penthouse</option>
+                            <option value="villa">Luxury Villa</option>
+                        </select>
+                        <textarea rows="4" placeholder="Your Message" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-600"></textarea>
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="space-y-8">
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-4">Visit Our Office</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <img src="https://www.vhv.rs/dpng/d/501-5016299_area-location-icon-png-file-transparent-png.png?height=14&width=14" alt="Location" class="w-6 h-6 mt-1">
+                                <p class="text-gray-600">123 Luxury Avenue, Premium Heights<br>New York, NY 10001</p>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <img src="https://i.pinimg.com/736x/33/74/f8/3374f84310d608d74314b06797d29822.jpg?height=14&width=14" alt="Phone" class="w-6 h-6 mt-1">
+                                <p class="text-gray-600">+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <img src="https://e7.pngegg.com/pngimages/818/690/png-clipart-email-computer-icons-gmail-email-miscellaneous-angle-thumbnail.png?height=24&width=24" alt="Email" class="w-6 h-6 mt-1">
+                                <p class="text-gray-600">info@luxuryproperties.com<br>sales@luxuryproperties.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-4">Business Hours</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Monday - Friday</span>
+                                <span class="font-medium">9:00 AM - 7:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Saturday</span>
+                                <span class="font-medium">10:00 AM - 5:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Sunday</span>
+                                <span class="font-medium">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about our properties</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-lg font-semibold mb-3">What are the payment terms?</h3>
+                    <p class="text-gray-600">We offer flexible payment plans with options for down payment and installments. Contact our sales team for detailed information.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-lg font-semibold mb-3">Is there a maintenance fee?</h3>
+                    <p class="text-gray-600">Yes, there is a monthly maintenance fee that covers common area upkeep, security, and basic amenities.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-lg font-semibold mb-3">Are the properties fully furnished?</h3>
+                    <p class="text-gray-600">We offer both furnished and unfurnished options. Furnished units come with premium fixtures and appliances.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-lg font-semibold mb-3">What about parking space?</h3>
+                    <p class="text-gray-600">Each unit comes with dedicated parking spaces. Additional parking can be arranged upon request.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-20 px-4 bg-blue-50">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Subscribe to our newsletter for exclusive updates and property listings</p>
+            <form class="flex flex-col sm:flex-row gap-4 justify-center max-w-xl mx-auto">
+                <input type="email" placeholder="Enter your email" class="flex-1 p-3 border rounded-lg focus:ring-2 focus:ring-blue-600">
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <img src="https://trinityoasis.in/assets/img/logo/logo_final.png?height=150&width=50" alt="Logo" class="h-12 mb-6">
+                    <p class="text-gray-600 mb-6">Experience luxury living at its finest with our premium properties and world-class amenities.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-gray-600">
+                            <img src="https://static.vecteezy.com/system/resources/previews/018/930/476/non_2x/facebook-logo-facebook-icon-transparent-free-png.png?height=24&width=24" alt="Facebook" class="w-6 h-6">
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-600">
+                            <img src="https://cdn-icons-png.flaticon.com/512/124/124021.png?height=24&width=24" alt="Twitter" class="w-6 h-6">
+                        </a>
+                        
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">About Us</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Our Properties</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Featured Listings</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Recent Projects</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Support</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Help Center</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Sitemap</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="border-t pt-8">
+                <p class="text-center text-gray-600">&copy; 2024 Luxury Properties. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize GSAP ScrollTrigger -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Animate sections on scroll
+        gsap.utils.toArray('section').forEach(section => {
+            gsap.from(section.children, {
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 80%',
+                    toggleActions: 'play none none reverse'
+                }
+            });
+        });
+    </script>
+</body>
+</html>

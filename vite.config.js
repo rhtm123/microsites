@@ -6,7 +6,8 @@ export default defineConfig({
       input: {
         main: './index.html',
         sunteck: './sunteck.html',
-        draditya: './draditya.html'
+        draditya: './draditya.html',
+        realestate: './realestate.html'
         // Add more HTML files as needed
       }
     }
