@@ -7,7 +7,8 @@ export default defineConfig({
         main: './index.html',
         sunteck: './sunteck.html',
         draditya: './draditya.html',
-        realestate: './realestate.html'
+        realestate: './realestate.html',
+        multiX: './multiX.html'
         // Add more HTML files as needed
       }
     }
