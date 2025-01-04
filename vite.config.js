@@ -8,7 +8,8 @@ export default defineConfig({
         sunteck: './sunteck.html',
         draditya: './draditya.html',
         realestate: './realestate.html',
-        multiX: './multiX.html'
+        multiX: './multiX.html',
+        nakshatra: './nakshatra.html'
         // Add more HTML files as needed
       }
     }
