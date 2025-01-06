@@ -69,76 +69,107 @@
 
     <!-- Hero Section -->
     <section id="home" class="relative min-h-screen flex items-center">
+        <!-- Background Image with Responsive Settings -->
         <div class="absolute inset-0 z-0">
-            <img src="https://jsb-nakshatra-naigaon-offical.com/wp-content/uploads/2024/12/Homepage-Banner-Final-1.png" alt="Luxury Property" class="w-full h-full object-cover object-center opacity-90">
-            <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
+            <img 
+                src="https://jsb-nakshatra-naigaon-offical.com/wp-content/uploads/2024/12/Homepage-Banner-Final-1.png" 
+                alt="Luxury Property" 
+                class="w-full h-full object-cover md:object-right-top lg:object-center"
+            >
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent to-black/50"></div>
+            <!-- <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div> -->
         </div>
-        <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-7xl mx-auto px-4 w-full">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <!-- Left Side - Text Content -->
-                    <div class="pt-20">
-                        <div class="mb-8">
-                            <h1 class="text-4xl py-6 text-white sm:text-5xl md:text-6xl font-bold mb-4 animate-fade-in-up">
-                                Nakshatra<br/>
-                                Nirvana
-                            </h1>
-                            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-4">RERA Number: P99000078092</p>
-                            <p class=" text-gray-200 text-lg sm:text-xl md:text-2xl mb-8">Experience luxury living in Naigaon East with our premium 1 & 2 BHK residences</p>
+    
+        <!-- Content Container -->
+        <div class="relative z-10 w-full">
+            <div class="container mx-auto px-4">
+                <!-- Mobile Layout (Centered) -->
+                <div class="md:hidden text-center px-4 pt-20">
+                    <h1 class="text-4xl text-white font-bold mb-4 animate-fade-in-up">
+                        Nakshatra<br/>
+                        Nirvana
+                    </h1>
+                    <p class="text-gray-200 text-lg mb-6">
+                        Experience luxury living in Naigaon East with our<br/> premium 1 & 2 BHK residences
+                    </p>
+                    
+                    <!-- Price Tags for Mobile -->
+                    <!-- <div class="flex flex-col gap-4 mb-8">
+                        <div class="bg-blue-900/80 backdrop-blur-sm p-4 rounded-lg border border-yellow-400">
+                            <div class="text-xl font-bold text-white">1 BHK</div>
+                            <div class="text-2xl font-bold text-yellow-400">₹35.50 LACS*</div>
+                            <div class="text-sm text-white">WITH ALL TAXES</div>
                         </div>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full transition-colors">
-                                Schedule a Visit
-                            </button>
-                            <button class="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-full transition-colors">
-                                Download Brochure
-                            </button>
+                        <div class="bg-blue-900/80 backdrop-blur-sm p-4 rounded-lg border border-yellow-400">
+                            <div class="text-xl font-bold text-white">2 BHK</div>
+                            <div class="text-2xl font-bold text-yellow-400">₹49 LACS*</div>
+                            <div class="text-sm text-white">WITH ALL TAXES</div>
                         </div>
-                    </div>
-
-                    <!-- Right Side - Enquiry Form -->
-                    <div class="lg:mt-20 ">
-                        <div class="bg-white/10 backdrop-blur-lg p-8 rounded-xl shadow-2xl sm:mb-4 ">
-                            <h2 class="text-2xl font-bold text-white mb-6">Enquire Now</h2>
-                            <form class="space-y-4">
-                                <input 
-                                    type="text" 
-                                    placeholder="Full Name" 
-                                    class="w-full p-3 rounded-lg bg-white/20 text-white placeholder-white/60 border border-white/30 focus:outline-none focus:border-white"
-                                >
-                                <input 
-                                    type="email" 
-                                    placeholder="Email Address" 
-                                    class="w-full p-3 rounded-lg bg-white/20 text-white placeholder-white/60 border border-white/30 focus:outline-none focus:border-white"
-                                >
-                                <input 
-                                    type="tel" 
-                                    placeholder="Phone Number" 
-                                    class="w-full p-3 rounded-lg bg-white/20 text-white placeholder-white/60 border border-white/30 focus:outline-none focus:border-white"
-                                >
-                                <select 
-                                    class="w-full p-3 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:border-white"
-                                >
-                                    <option value="" class="text-gray-900">Select Configuration</option>
-                                    <option value="1bhk" class="text-gray-900">1 BHK</option>
-                                    <option value="2bhk" class="text-gray-900">2 BHK</option>
-                                </select>
-                                <button 
-                                    type="submit" 
-                                    class="w-full bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-lg transition-colors"
-                                >
-                                    Submit Enquiry
-                                </button>
-                            </form>
+                    </div> -->
+    
+                    <!-- Buttons for Mobile -->
+                    <!-- <div class="flex flex-col gap-4">
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition-all duration-300 animate-pulse-custom">
+                            Schedule a Visit
+                        </button>
+                        <button class="w-full bg-white hover:bg-gray-100 text-gray-900 px-6 py-3 rounded-full transition-all duration-300 animate-bounce-custom">
+                            Download Brochure
+                        </button>
+                    </div> -->
+                </div>
+    
+                <!-- Desktop Layout (Right Aligned) -->
+                <div class="hidden md:block">
+                    <div class="grid grid-cols-12 gap-4">
+                        <!-- Empty Left Space -->
+                        <div class="col-span-7"></div>
+                        
+                        <!-- Right Content -->
+                        <div class="col-span-5 pt-20">
+                            <div class="text-right">
+                                <h1 class="text-5xl lg:text-6xl text-white font-bold mb-4 animate-fade-in-up">
+                                    Nakshatra<br/>
+                                    Nirvana
+                                </h1>
+                                <p class="text-gray-200 text-xl lg:text-2xl mb-8">
+                                    Experience luxury living in Naigaon East with our premium 1 & 2 BHK residences
+                                </p>
+                                
+                                <!-- Price Tags -->
+                                <!-- <div class="flex flex-col lg:flex-row gap-4 justify-end mb-8">
+                                    <div class="bg-blue-900/80 backdrop-blur-sm p-4 rounded-lg border border-yellow-400">
+                                        <div class="text-2xl font-bold text-white">1 BHK</div>
+                                        <div class="text-3xl font-bold text-yellow-400">₹35.50 LACS*</div>
+                                        <div class="text-sm text-white">WITH ALL TAXES</div>
+                                    </div>
+                                    <div class="bg-blue-900/80 backdrop-blur-sm p-4 rounded-lg border border-yellow-400">
+                                        <div class="text-2xl font-bold text-white">2 BHK</div>
+                                        <div class="text-3xl font-bold text-yellow-400">₹49 LACS*</div>
+                                        <div class="text-sm text-white">WITH ALL TAXES</div>
+                                    </div>
+                                </div> -->
+    
+                                <!-- Buttons -->
+                                <div class="flex flex-row gap-4 justify-end">
+                                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full transition-all duration-300 animate-pulse-custom">
+                                        Schedule a Visit
+                                    </button>
+                                    <button class="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-full transition-all duration-300 animate-bounce-custom">
+                                        Download Brochure
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </section>
 
     <!-- Quick Info Section -->
-    <section class="py-12 bg-white">
+    <!-- <section class="py-12 bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="flex items-center gap-4 p-6 bg-gray-50 rounded-xl">
@@ -188,9 +219,69 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
+<!-- About Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">About Nakshatra Nirvana</h2>
+        
+        <div class="prose max-w-none">
+            <p class="text-lg mb-6">
+                Welcome to <strong>Nakshatra Nirvana</strong>, your gateway to modern living in <strong>Naigaon East</strong>. As one of the most sought-after <strong>1 BHK in Naigaon</strong> and <strong>2 BHK flats in Naigaon</strong>, we offer thoughtfully designed spaces that elevate your lifestyle.
+            </p>
 
+            <p class="text-lg mb-6">
+                Looking for premium yet <strong>low budget flats in Naigaon</strong>? Our project offers the perfect balance of luxury and affordability. Whether you're searching for a <strong>flat in Naigaon</strong> or exploring <strong>Naigaon flats</strong> for investment, Nakshatra Nirvana presents an unmatched opportunity.
+            </p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">Premium Features & Strategic Location</h3>
+            <p class="text-lg mb-6">
+                With competitive <strong>Naigaon flat price</strong> points starting from ₹35.50 Lacs*, our residences offer exceptional value. The <strong>Naigaon 1 BHK flat price</strong> is designed to make luxury living accessible while ensuring premium quality and amenities.
+            </p>
+
+            <!-- <div class="grid md:grid-cols-2 gap-8 my-8">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="text-xl font-semibold mb-4">Location Advantages</h4>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Close proximity to Naigaon Railway Station</li>
+                        <li>Easy access to Western Express Highway</li>
+                        <li>Near schools, hospitals, and shopping centers</li>
+                        <li>Surrounded by lush greenery</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="text-xl font-semibold mb-4">Premium Amenities</h4>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Modern clubhouse with gymnasium</li>
+                        <li>Swimming pool and jogging tracks</li>
+                        <li>Landscaped gardens</li>
+                        <li>Children's play area</li>
+                        <li>24/7 security with CCTV surveillance</li>
+                    </ul>
+                </div>
+            </div> -->
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">Investment Potential</h3>
+            <p class="text-lg mb-6">
+                As one of the premier <strong>flats in Naigaon</strong>, Nakshatra Nirvana offers excellent investment potential. With the area's rapid development and increasing demand for quality housing, your investment is poised for significant appreciation.
+            </p>
+
+            <!-- <div class="bg-blue-50 p-6 rounded-lg mt-8">
+                <h4 class="text-xl font-semibold mb-4">Why Choose Nakshatra Nirvana?</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Premium location in rapidly developing Naigaon East</li>
+                    <li>Competitive pricing with high appreciation potential</li>
+                    <li>World-class amenities and modern lifestyle features</li>
+                    <li>Backed by trusted JSB Group</li>
+                    <li>Sustainable and eco-friendly features</li>
+                    <li>Excellent connectivity and infrastructure</li>
+                </ul>
+            </div> -->
+        </div>
+    </div>
+</section>
     <!-- Why Choose Us Section -->
 <section class=" bg-gradient-to-b from-white to-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -205,10 +296,11 @@
             <!-- Premium Location Card -->
             <div class="group hover:-translate-y-2 transition-all duration-300">
                 <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full">
-                    <div class="flex items-center justify-center w-16 h-16 bg-blue-50 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    <!-- Adjusted size of container and icon -->
+                    <div class="flex items-center justify-center w-14 h-14  rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">Prime Location</h3>
@@ -219,8 +311,8 @@
             <!-- Quality Construction Card -->
             <div class="group hover:-translate-y-2 transition-all duration-300">
                 <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full">
-                    <div class="flex items-center justify-center w-16 h-16 bg-blue-50 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="flex items-center justify-center w-14 h-14  rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                         </svg>
                     </div>
@@ -232,8 +324,8 @@
             <!-- Modern Amenities Card -->
             <div class="group hover:-translate-y-2 transition-all duration-300">
                 <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full">
-                    <div class="flex items-center justify-center w-16 h-16 bg-blue-50 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="flex items-center justify-center w-14 h-14  rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
                         </svg>
                     </div>
@@ -245,8 +337,8 @@
             <!-- Smart Homes Card -->
             <div class="group hover:-translate-y-2 transition-all duration-300">
                 <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full">
-                    <div class="flex items-center justify-center w-16 h-16 bg-blue-50 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="flex items-center justify-center w-14 h-14  rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                         </svg>
                     </div>
@@ -258,8 +350,8 @@
             <!-- Investment Value Card -->
             <div class="group hover:-translate-y-2 transition-all duration-300">
                 <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full">
-                    <div class="flex items-center justify-center w-16 h-16 bg-blue-50 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="flex items-center justify-center w-14 h-14  rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
@@ -271,8 +363,8 @@
             <!-- Trust & Reliability Card -->
             <div class="group hover:-translate-y-2 transition-all duration-300">
                 <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full">
-                    <div class="flex items-center justify-center w-16 h-16 bg-blue-50 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="flex items-center justify-center w-14 h-14  rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                         </svg>
                     </div>
@@ -1291,17 +1383,42 @@
                         </div>
                     </div>
 
-                    <!-- RERA Info -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    <!-- Free Site Visit Info -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden">
+                        <!-- Animated Offer Label -->
+                        <div class="absolute -right-12 top-6 bg-red-500 text-white py-1 px-12 transform rotate-45 shadow-lg animate-pulse-offer">
+                            <span class="text-sm font-bold">SPECIAL OFFER</span>
+                        </div>
+                    
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full flex items-center justify-center mr-4 shadow-sm">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
                                 </svg>
                             </div>
-                            <div>
-                                <h3 class="text-lg font-semibold">RERA Details</h3>
-                                <p class="text-gray-600">RERA Number: P99000078092</p>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold mb-2">Free Site Visit</h3>
+                                <p class="text-gray-600 mb-3">Experience your future home firsthand with our complimentary site visit service.</p>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-center">
+                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                        </svg>
+                                        Personalized tour of the property
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                        </svg>
+                                        Expert guidance available
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                        </svg>
+                                        Flexible scheduling
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -1357,7 +1474,7 @@
     </section>
 
     <!-- Footer -->
-<footer class="bg-gray-900 text-white pt-20 pb-10">
+<footer class="bg-gray-800 text-white pt-20 pb-10">
     <div class="max-w-7xl mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <!-- Company Info -->
@@ -1546,22 +1663,28 @@
                         type="text" 
                         placeholder="Name" 
                         required
-                        class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500"
+                        class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 placeholder:text-gray-500"
                     >
                     
                     <input 
                         type="tel" 
                         placeholder="Mobile No" 
                         required
-                        class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500"
+                        class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 placeholder:text-gray-500"
                     >
+                    <select class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500">
+                                    <option value="" class="text-gray-900">Select Configuration</option>
+                                    <option value="1bhk" class="text-gray-900">1 BHK</option>
+                                    <option value="2bhk" class="text-gray-900">2 BHK</option>
+                                </select>
+
                     
-                    <input 
+                    <!-- <input 
                         type="email" 
                         placeholder="E-Mail Address" 
                         required
                         class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500"
-                    >
+                    > -->
                     
                     <button 
                         type="submit"
@@ -1574,6 +1697,30 @@
         </div>
     </div>
 </div>
+
+
+<!-- WhatsApp Float Button -->
+<a 
+    href="https://wa.me/919930584340?text=Hi,%20I%20am%20interested%20in%20Nakshatra%20Nirvana%20project.%20Please%20share%20more%20details." 
+    target="_blank"
+    class="fixed bottom-6 right-6 z-50 block"
+>
+    <div class="relative">
+        <!-- Pulsating Ring -->
+        <div class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></div>
+        
+        <!-- WhatsApp Button -->
+        <div class="relative bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 cursor-pointer">
+            <svg 
+                class="w-8 h-8" 
+                fill="currentColor" 
+                viewBox="0 0 24 24"
+            >
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </div>
+    </div>
+</a>
 
     <!-- Add this JavaScript to the bottom of your file or in your scripts section -->
     <script>
@@ -1675,6 +1822,22 @@
         }
     </style>
 
+    <style>
+        @keyframes pulseOffer {
+            0%, 100% {
+                background-color: rgb(239, 68, 68); /* red-500 */
+                transform: rotate(45deg) scale(1);
+            }
+            50% {
+                background-color: rgb(220, 38, 38); /* red-600 */
+                transform: rotate(45deg) scale(1.05);
+            }
+        }
+    
+        .animate-pulse-offer {
+            animation: pulseOffer 2s infinite;
+        }
+    </style>
     <!-- Add these animations to your CSS -->
     <style>
         @keyframes fade-in-up {
@@ -1835,6 +1998,8 @@
             animation: pulse 2s infinite;
         }
 
+    
+        
         @keyframes pulse {
             0% {
                 transform: scale(1);
