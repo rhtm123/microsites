@@ -9,7 +9,8 @@ export default defineConfig({
         draditya: './draditya.html',
         realestate: './realestate.html',
         multiX: './multiX.html',
-        nakshatra: './nakshatra.html'
+        nakshatra: './nakshatra.html',
+        interior: './interior.html'
         // Add more HTML files as needed
       }
     }
