@@ -10,7 +10,9 @@ export default defineConfig({
         realestate: './realestate.html',
         multiX: './multiX.html',
         nakshatra: './nakshatra.html',
-        interior: './interior.html'
+        interior: './interior.html',
+        interior2: './interior2.html',
+
         // Add more HTML files as needed
       }
     }
