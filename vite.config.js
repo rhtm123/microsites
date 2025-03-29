@@ -12,6 +12,7 @@ export default defineConfig({
         nakshatra: './nakshatra.html',
         interior: './interior.html',
         interior2: './interior2.html',
+        events: './events.html',
 
         // Add more HTML files as needed
       }
